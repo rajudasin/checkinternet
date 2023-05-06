@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Are you online ? - Raju Das</title>
+    <style>
+         *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+         }
+         body{
+            width: 100%;
+            height: auto;
+            background-color: black;
+         }
+
+         #con{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+         }
+         #text{
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 30px;
+            color: white;
+            font-weight: bold;
+         }
+    </style>
+</head>
+<body>
+     <section id="con">
+        <h3 id="text">You are Online.</h3> 
+     </section>
+     <script>
+          window.addEventListener('online',function(){
+                document.getElementById('text').innerText = "You are <b>Online</b>";
+          });
+          window.addEventListener('offline',function(){
+                document.getElementById('text').innerText = "You are <b>Offline</b>";
+          });
+     </script>
+</body>
+</html>
